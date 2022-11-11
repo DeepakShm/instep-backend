@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ApplicationModule } from './application/application.module';
+import { MultiStepFormModule } from './multi-step-form/multi-step-form.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [ApplicationModule],
+  imports: [MultiStepFormModule,PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })

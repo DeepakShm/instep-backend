@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ApplicationService } from './application.service';
+import { MultiStepFormService } from './multi-step-form.service';
 
-describe('ApplicationService', () => {
-  let service: ApplicationService;
+describe('MultiStepFormService', () => {
+  let service: MultiStepFormService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [ApplicationService],
+      providers: [MultiStepFormService],
     }).compile();
 
-    service = module.get<ApplicationService>(ApplicationService);
+    service = module.get<MultiStepFormService>(MultiStepFormService);
   });
 
   it('should be defined', () => {
